@@ -12,7 +12,7 @@ const moods = {
 const MoodContext = createContext(moods)
 
 function Header(props) {
-    // this component doesn't need the mood context
+    // this component do not need the mood context
     return (
         <header>
             <h1>Use Context</h1>
@@ -22,7 +22,7 @@ function Header(props) {
 }
 
 function MoodEmoji() {
-    // this component can catch the context without receiving through props
+    // this component can catch the context without props
     const mood = useContext(MoodContext)
 
     return <p>{ mood }</p>
